@@ -11,7 +11,7 @@ export class HomePage {
   single: any[];
   multi: any[];
 
-  view: any[] = [850, 550];
+  // view: any[] = [850, 550];
 
   // options
   showXAxis = true;
@@ -19,7 +19,7 @@ export class HomePage {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Sector';
+  xAxisLabel = 'Section';
   showYAxisLabel = true;
   yAxisLabel = 'Value';
 
