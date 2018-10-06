@@ -101,7 +101,7 @@ export class ListPage implements OnInit {
           text: 'تأكيد',
           handler: () => {
             // this.cities =
-            console.log(alert.inputs);
+            console.log(alert.inputs[1].checked);
           }
         }
       ]
