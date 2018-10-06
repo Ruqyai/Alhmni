@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { details } from '../shared/data';
+import { details, jeddah, makkah, riyad } from '../shared/data';
 
 @Component({
   selector: 'app-list',
@@ -11,6 +11,7 @@ export class ListPage implements OnInit {
 
   areas: string[] = ['farming'];
   cities: string[] = ['jeddah'];
+  citiesGrowth: any[];
 
   details: any[];
     // options
@@ -29,6 +30,11 @@ export class ListPage implements OnInit {
 
   constructor(public alertController: AlertController) {
     Object.assign(this, { details });
+    this.citiesGrowth = [];
+    this.citiesGrowth.push(jeddah);
+    // for (let i = 0; i < this.cities.length; i++) {
+    //   this.citiesGrowth = this.cities[i];
+    // }
   }
 
   ngOnInit() { }
@@ -135,6 +141,24 @@ export class ListPage implements OnInit {
     alert.onWillDismiss().then(a => {
       console.log(a.data.values);
       this.cities = a.data.values;
+      this.citiesGrowth = [];
+      for (let i = 0; i < this.cities.length; i++) {
+        switch (this.cities[i]) {
+          case 'jeddah' : {
+            this.citiesGrowth.push(jeddah);
+          }
+          break;
+          case 'Makkah' : {
+            this.citiesGrowth.push(makkah);
+          }
+          break;
+          case 'Riyadh' : {
+            this.citiesGrowth.push(riyad);
+          }
+          break;
+        }
+      }
+      console.log(this.citiesGrowth);
     });
   }
 
