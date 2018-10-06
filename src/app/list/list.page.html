@@ -44,6 +44,31 @@
           <ion-col></ion-col>
         </ion-row>
 
+        <ion-row *ngIf="citiesGrowth.length > 0">
+          <ion-col></ion-col>
+          <ion-col>
+              <ngx-charts-line-chart
+                [scheme]="colorScheme"
+                [results]="citiesGrowth"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                (select)="onSelect($event)">
+              </ngx-charts-line-chart>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <br>
+            <br>
+          </ion-col>
+        </ion-row>
         <ion-row>
           <ion-col></ion-col>
           <ion-col>
@@ -63,25 +88,13 @@
           </ion-col>
           <ion-col></ion-col>
         </ion-row>
-        <ion-row *ngIf="citiesGrowth.length > 0">
-            <ion-col></ion-col>
-            <ion-col>
-                <ngx-charts-line-chart
-                  [scheme]="colorScheme"
-                  [results]="citiesGrowth"
-                  [gradient]="gradient"
-                  [xAxis]="showXAxis"
-                  [yAxis]="showYAxis"
-                  [legend]="showLegend"
-                  [showXAxisLabel]="showXAxisLabel"
-                  [showYAxisLabel]="showYAxisLabel"
-                  [xAxisLabel]="xAxisLabel"
-                  [yAxisLabel]="yAxisLabel"
-                  (select)="onSelect($event)">
-                </ngx-charts-line-chart>
-            </ion-col>
-            <ion-col></ion-col>
-          </ion-row>
+        <ion-row>
+          <ion-col>
+            <br>
+            <br>
+          </ion-col>
+        </ion-row>
+        
       </ion-col>
     </ion-row>
  </ion-grid>

@@ -19,7 +19,7 @@ export class HomePage {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Section';
+  xAxisLabel = 'Time';
   showYAxisLabel = true;
   yAxisLabel = 'Value';
 

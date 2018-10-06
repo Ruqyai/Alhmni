@@ -21,9 +21,9 @@ export class ListPage implements OnInit {
     gradient = false;
     showLegend = true;
     showXAxisLabel = true;
-    xAxisLabel = 'Sector';
+    xAxisLabel = 'Time';
     showYAxisLabel = true;
-    yAxisLabel = 'Quantity';
+    yAxisLabel = 'Value';
     colorScheme = {
       domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
     };
