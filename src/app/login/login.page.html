@@ -4,13 +4,38 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content padding>
-  <form [formGroup]="loginForm" (ngSubmit)="submit()">
-    <ion-label>اميل</ion-label>
-    <ion-input type="email" formControlName="email" placeholder="example@gmail.com" required></ion-input>
-    <ion-label>كلمة السر</ion-label>
-    <ion-input type="password" formControlName="password" placeholder="example@gmail.com" required></ion-input>
+<ion-content color="medium">
+  <ion-row align-items-center>
+    <ion-col></ion-col>
+    <ion-col text-center>
+      <ion-card color="light" style="margin-top: 100px">
+        <ion-card-header margin-vertical>
+          <ion-card-title color="primary">تسجيل الدخول</ion-card-title>
+        </ion-card-header>
 
-    <ion-button type="submit">سجل دخول</ion-button>
-  </form>
+        <ion-card-content>
+          <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <ion-item text-center>
+              <ion-col size="3">
+                <ion-label>إيميل: </ion-label>
+              </ion-col>
+              <ion-input type="email" formControlName="email" placeholder="example@gmail.com" required></ion-input>
+            </ion-item>
+
+            <ion-item text-center>
+              <ion-col size="3">
+                <ion-label>كلمة السر: </ion-label>
+              </ion-col>
+              <ion-input type="password" formControlName="password" placeholder="******" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-button type="submit" expand="block" margin-top>دخول</ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col></ion-col>
+    </ion-row>
+  
+  
 </ion-content>
