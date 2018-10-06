@@ -26,7 +26,82 @@ export const single =
     ]
   }
 ];
+export const jeddah =   {
+    "name": "jeddah",
+    "series": [
+      {
+        "value": 3450,
+        "name": "2016-09-14"
+      },
+      {
+        "value": 4650,
+        "name": "2016-09-16"
+      },
+      {
+        "value": 2033,
+        "name": "2016-09-13"
+      },
+      {
+        "value": 6578,
+        "name": "2016-09-17"
+      },
+      {
+        "value": 4724,
+        "name": "2016-09-22"
+      }
+    ]
+  };
+export const makkah = {
+    "name": "makkah",
+    "series": [
+      {
+        "value": 2000,
+        "name": "2016-09-14"
+      },
+      {
+        "value": 5000,
+        "name": "2016-09-16"
+      },
+      {
+        "value": 1500,
+        "name": "2016-09-13"
+      },
+      {
+        "value": 6200,
+        "name": "2016-09-17"
+      },
+      {
+        "value": 4724,
+        "name": "2016-09-22"
+      }
+    ]
+};
 
+export const riyad = {
+    "name": "riyad",
+    "series": [
+      {
+        "value": 6000,
+        "name": "2016-09-14"
+      },
+      {
+        "value": 5000,
+        "name": "2016-09-16"
+      },
+      {
+        "value": 4000,
+        "name": "2016-09-13"
+      },
+      {
+        "value": 6200,
+        "name": "2016-09-17"
+      },
+      {
+        "value": 4724,
+        "name": "2016-09-22"
+      }
+    ]
+};
 export const details =
 [
     {
@@ -61,6 +136,8 @@ export const details =
     }
 
 ];
+
+
 //   export var multi = [
 //     {
 //       "name": "Germany",
