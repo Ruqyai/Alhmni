@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { details } from '../shared/data';
 
 @Component({
   selector: 'app-list',
@@ -20,6 +21,22 @@ export class ListPage implements OnInit {
     'build'
   ];
   public items: Array<{ title: string; note: string; icon: string }> = [];
+    details: any[];
+    // options
+    view: any[] = [850, 550];
+    showXAxis = true;
+    showYAxis = true;
+    gradient = false;
+    showLegend = true;
+    showXAxisLabel = true;
+    xAxisLabel = 'Sector';
+    showYAxisLabel = true;
+    yAxisLabel = 'Quantity';
+    colorScheme = {
+      domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    };
+
+
   constructor() {
     for (let i = 1; i < 11; i++) {
       this.items.push({
@@ -28,9 +45,14 @@ export class ListPage implements OnInit {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+    Object.assign(this, { details });
   }
 
   ngOnInit() {
+  }
+
+  onSelect(event) {
+    console.log(event);
   }
   // add back when alpha.4 is out
   // navigate(item) {

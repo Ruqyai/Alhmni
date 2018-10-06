@@ -1,4 +1,4 @@
-export const single = 
+export const single =
 [
   {
     "name": "Growth",
@@ -26,45 +26,80 @@ export const single =
     ]
   }
 ];
-  export var multi = [
-    {
-      "name": "Germany",
-      "series": [
-        {
-          "name": "2010",
-          "value": 7300000
-        },
-        {
-          "name": "2011",
-          "value": 8940000
-        }
-      ]
-    },
-    {
-      "name": "USA",
-      "series": [
-        {
-          "name": "2010",
-          "value": 7870000
-        },
-        {
-          "name": "2011",
-          "value": 8270000
-        }
-      ]
-    },
 
+export const details =
+[
     {
-      "name": "France",
-      "series": [
-        {
-          "name": "2010",
-          "value": 5000002
-        },
-        {
-          "name": "2011",
-          "value": 5800000
-        }
-      ]
+        'name': 'import',
+        'series': [
+            {
+                'value': 2000,
+                'name': '2016-09-14'
+            },
+            {
+                'value': 3000,
+                'name': '2016-09-22'
+            },
+            {
+                'value': 3400,
+                'name': '2016-10-09'
+            }
+        ]
+    },
+    {
+        'name': 'export',
+        'series': [
+            {
+                'value': 1500,
+                'name': '2016-09-14'
+            },
+            {
+                'value': 500,
+                'name': '2016-10-09'
+            }
+        ]
     }
-  ];
+
+];
+//   export var multi = [
+//     {
+//       "name": "Germany",
+//       "series": [
+//         {
+//           "name": "2010",
+//           "value": 7300000
+//         },
+//         {
+//           "name": "2011",
+//           "value": 8940000
+//         }
+//       ]
+//     },
+//     {
+//       "name": "USA",
+//       "series": [
+//         {
+//           "name": "2010",
+//           "value": 7870000
+//         },
+//         {
+//           "name": "2011",
+//           "value": 8270000
+//         }
+//       ]
+//     },
+
+//     {
+//       "name": "France",
+//       "series": [
+//         {
+//           "name": "2010",
+//           "value": 5000002
+//         },
+//         {
+//           "name": "2011",
+//           "value": 5800000
+//         }
+//       ]
+//     }
+//   ];

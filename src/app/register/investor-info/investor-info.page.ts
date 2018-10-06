@@ -13,6 +13,8 @@ export class InvestorInfoPage implements OnInit {
   ngOnInit() {
   }
 
+  
+
   close() {
     this.modalCtrl.dismiss();
   }

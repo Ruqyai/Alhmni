@@ -11,7 +11,7 @@ export class HomePage {
   single: any[];
   multi: any[];
 
-  view: any[] = [600, 500];
+  view: any[] = [850, 550];
 
   // options
   showXAxis = true;
@@ -19,9 +19,9 @@ export class HomePage {
   gradient = false;
   showLegend = true;
   showXAxisLabel = true;
-  xAxisLabel = 'Country';
+  xAxisLabel = 'Sector';
   showYAxisLabel = true;
-  yAxisLabel = 'Population';
+  yAxisLabel = 'Value';
 
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
