@@ -22,19 +22,33 @@
 </ion-header>
 
 <ion-content color="" padding>
+
   <ion-grid>
     <ion-row>
-      <ion-col size="4" text-center>
+      <ion-col size="6" text-center>
         <ion-card color="light" [routerLink]="['/home/list']">
           <ion-card-header>
             <ion-card-title color="primary">قطاع الزراعة</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-              <ion-img src="../../assets/img/chart.png"></ion-img>
+              <ngx-charts-line-chart
+              [view]="view"
+              [scheme]="colorScheme"
+              [results]="single"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              (select)="onSelect($event)">
+            </ngx-charts-line-chart>
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="4" text-center>
+      <ion-col size="6" text-center>
         <ion-card color="light">
           <ion-card-header>
             <ion-card-title color="primary">قطاع الصناعة</ion-card-title>
@@ -44,7 +58,7 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col size="4" text-center>
+      <ion-col size="6" text-center>
           <ion-card color="light">
             <ion-card-header>
               <ion-card-title color="primary">قطاع الترفيه</ion-card-title>
@@ -56,7 +70,7 @@
         </ion-col>
 
 
-        <ion-col size="4" text-center>
+        <ion-col size="6" text-center>
           <ion-card color="light">
             <ion-card-header>
               <ion-card-title color="primary">قطاع ال</ion-card-title>
@@ -76,7 +90,7 @@
             </ion-card-content>
           </ion-card>
         </ion-col>
-        <ion-col size="4" text-center>
+        <ion-col size="6" text-center>
           <ion-card color="light">
             <ion-card-header>
               <ion-card-title color="primary">قطاع الزراعة</ion-card-title>

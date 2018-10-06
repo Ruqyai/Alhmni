@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>user-info</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="close()">
+              <!-- <ion-icon name="ios-arrow-forward"></ion-icon> -->
+              رجوع
+            </ion-button>
+          </ion-buttons>
+          <ion-title text-center>تسجيل رائد أعمال</ion-title>
+          <ion-buttons slot="end" style="width: 50px"></ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content padding>
-
+    <ion-item>
+      <ion-input type="text" placeholder="الاسم الاول"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" placeholder="الاسم الاخير"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" placeholder="اميل"></ion-input>
+    </ion-item>
+  
+    <br>
+    <br>
+    <ion-button expand="full">تسجيل</ion-button>
 </ion-content>
