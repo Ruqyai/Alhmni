@@ -9,9 +9,27 @@ import { details } from '../shared/data';
 })
 export class ListPage implements OnInit {
 
-  cities: string[] = [];
+  areas: string[] = ['farming'];
+  cities: string[] = ['jeddah'];
 
-  constructor(public alertController: AlertController) { }
+  details: any[];
+    // options
+    view: any[] = [850, 550];
+    showXAxis = true;
+    showYAxis = true;
+    gradient = false;
+    showLegend = true;
+    showXAxisLabel = true;
+    xAxisLabel = 'Sector';
+    showYAxisLabel = true;
+    yAxisLabel = 'Quantity';
+    colorScheme = {
+      domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    };
+
+  constructor(public alertController: AlertController) {
+    Object.assign(this, { details });
+  }
 
   ngOnInit() { }
 
@@ -24,7 +42,7 @@ export class ListPage implements OnInit {
           name: 'farming',
           type: 'checkbox',
           label: 'الزراعة',
-          value: 'value1',
+          value: 'farming',
           checked: true
         },
 
@@ -32,14 +50,14 @@ export class ListPage implements OnInit {
           name: 'creating',
           type: 'checkbox',
           label: 'الصناعة',
-          value: 'value2'
+          value: 'creating'
         },
 
         {
           name: 'fun',
           type: 'checkbox',
           label: 'الترفيه',
-          value: 'value3'
+          value: 'fun'
         }
       ],
       buttons: [
@@ -48,20 +66,25 @@ export class ListPage implements OnInit {
           role: 'cancel',
           cssClass: 'secondary',
           handler: () => {
-            console.log('Confirm Cancel');
+            console.log('Cancel');
           }
         }, {
           text: 'تأكيد',
           handler: () => {
             // this.cities =
-            console.log('Confirm Ok');
+            console.log('Ok');
           }
         }
       ]
     });
 
     await alert.present();
+    alert.onWillDismiss().then(a => {
+      console.log(a.data.values);
+      this.areas = a.data.values;
+    });
   }
+
 
   async presentCitiesCheckbox() {
     const alert = await this.alertController.create({
@@ -72,7 +95,7 @@ export class ListPage implements OnInit {
           name: 'jeddah',
           type: 'checkbox',
           label: 'جدة',
-          value: 'value1',
+          value: 'jeddah',
           checked: true
         },
 
@@ -80,14 +103,14 @@ export class ListPage implements OnInit {
           name: 'Riyadh',
           type: 'checkbox',
           label: 'رياض',
-          value: 'value2'
+          value: 'Riyadh'
         },
 
         {
           name: 'Makkah',
           type: 'checkbox',
           label: 'مكة',
-          value: 'value3'
+          value: 'Makkah'
         }
       ],
       buttons: [
@@ -96,19 +119,23 @@ export class ListPage implements OnInit {
           role: 'cancel',
           cssClass: 'secondary',
           handler: () => {
-            console.log('Confirm Cancel');
+            console.log('Cancel');
           }
         }, {
           text: 'تأكيد',
           handler: () => {
             // this.cities =
-            console.log(alert.inputs[1].checked);
+            console.log('ok');
           }
         }
       ]
     });
 
     await alert.present();
+    alert.onWillDismiss().then(a => {
+      console.log(a.data.values);
+      this.cities = a.data.values;
+    });
   }
 
   onSelect(event) {
