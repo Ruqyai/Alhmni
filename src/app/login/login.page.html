@@ -1,0 +1,16 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <ion-label>اميل</ion-label>
+    <ion-input type="email" formControlName="email" placeholder="example@gmail.com" required></ion-input>
+    <ion-label>كلمة السر</ion-label>
+    <ion-input type="password" formControlName="password" placeholder="example@gmail.com" required></ion-input>
+
+    <ion-button type="submit">سجل دخول</ion-button>
+  </form>
+</ion-content>
