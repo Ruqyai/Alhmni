@@ -25,14 +25,10 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="4">
+      <ion-col size="2" class="full">
         <ion-list>
-          <ion-item color="medium">
-            القطاع
-          </ion-item>
-          <ion-item color="medium">
-            المدينة
-          </ion-item>
+          <ion-button color="primary" expand="full" fill="outline" (click)="presentAreaCheckbox()">القطاعات</ion-button>
+          <ion-button color="primary" expand="full" fill="outline" (click)="presentCitiesCheckbox()">المدن</ion-button>
         </ion-list>
       </ion-col>
 

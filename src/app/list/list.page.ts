@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-list',
@@ -6,34 +7,107 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+
+  cities: string[] = [];
+
+  constructor(public alertController: AlertController) { }
+
+  ngOnInit() { }
+
+  async presentAreaCheckbox() {
+    const alert = await this.alertController.create({
+      header: 'Checkbox',
+      mode: 'ios',
+      inputs: [
+        {
+          name: 'farming',
+          type: 'checkbox',
+          label: 'الزراعة',
+          value: 'value1',
+          checked: true
+        },
+
+        {
+          name: 'creating',
+          type: 'checkbox',
+          label: 'الصناعة',
+          value: 'value2'
+        },
+
+        {
+          name: 'fun',
+          type: 'checkbox',
+          label: 'الترفيه',
+          value: 'value3'
+        }
+      ],
+      buttons: [
+        {
+          text: 'الغاء',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'تأكيد',
+          handler: () => {
+            // this.cities =
+            console.log('Confirm Ok');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
-  ngOnInit() {
+  async presentCitiesCheckbox() {
+    const alert = await this.alertController.create({
+      header: 'Checkbox',
+      mode: 'ios',
+      inputs: [
+        {
+          name: 'jeddah',
+          type: 'checkbox',
+          label: 'جدة',
+          value: 'value1',
+          checked: true
+        },
+
+        {
+          name: 'Riyadh',
+          type: 'checkbox',
+          label: 'رياض',
+          value: 'value2'
+        },
+
+        {
+          name: 'Makkah',
+          type: 'checkbox',
+          label: 'مكة',
+          value: 'value3'
+        }
+      ],
+      buttons: [
+        {
+          text: 'الغاء',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'تأكيد',
+          handler: () => {
+            // this.cities =
+            console.log(alert.inputs);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+
 }
