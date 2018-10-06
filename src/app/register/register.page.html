@@ -4,8 +4,30 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content padding>
-  <ion-button (click)=''>رائد اعمال</ion-button>
-  <ion-button (click)=''>مستثمر</ion-button>
-  
+<ion-content color="medium" padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+          <ion-card color="light">
+              <ion-card-content>
+                  <ion-grid>
+                      <ion-row>
+                        <ion-col >
+                            <ion-button (click)="userRegister()" expand="full">رائد اعمال</ion-button>
+                        </ion-col>
+                      </ion-row>
+                      <ion-row>
+                        <ion-col >
+                            <ion-button (click)="investorRegister()" expand="full">مستثمر</ion-button>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+              </ion-card-content>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
 </ion-content>

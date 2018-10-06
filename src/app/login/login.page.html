@@ -29,8 +29,10 @@
               <ion-input type="password" formControlName="password" placeholder="******" required></ion-input>
             </ion-item>
             <br>
-            <ion-button type="submit" expand="block" margin-top>دخول</ion-button>
+            <ion-button type="submit" expand="block" [routerLink]="['/home']" margin-top>دخول</ion-button>
           </form>
+          <br>
+          <a [routerLink]="['/register']">ليس لديك حساب؟</a>
         </ion-card-content>
       </ion-card>
     </ion-col>

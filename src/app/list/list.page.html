@@ -47,7 +47,20 @@
         <ion-row>
           <ion-col></ion-col>
           <ion-col>
-            <ion-img src="../../assets/img/chart.png"></ion-img>
+              <ngx-charts-line-chart
+                [view]="view"
+                [scheme]="colorScheme"
+                [results]="details"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                (select)="onSelect($event)">
+              </ngx-charts-line-chart>
           </ion-col>
           <ion-col></ion-col>
         </ion-row>

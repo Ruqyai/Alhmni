@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { details } from '../shared/data';
 
 @Component({
   selector: 'app-list',
@@ -108,6 +109,10 @@ export class ListPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  onSelect(event) {
+    console.log(event);
   }
 
 }

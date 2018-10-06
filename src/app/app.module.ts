@@ -12,17 +12,22 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { UserInfoPage } from './register/user-info/user-info.page';
+import { InvestorInfoPage } from './register/investor-info/investor-info.page';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ReactiveFormsModule } from '@angular/forms';
 // import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, UserInfoPage],
-  entryComponents: [UserInfoPage],
+  declarations: [AppComponent, UserInfoPage, InvestorInfoPage],
+  entryComponents: [UserInfoPage, InvestorInfoPage],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     // ReactiveFormsModule,
+    NgxChartsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
